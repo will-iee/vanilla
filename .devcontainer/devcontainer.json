@@ -1,8 +1,15 @@
 {
   "name": "ChronosCraft Dev Env V1.0",
+
+  // --- DOCKER COMPOSE INTEGRATION ---
+  // Point to your docker-compose.yml file
   "dockerComposeFile": "docker-compose.yml",
+
+  // Specify which service in the docker-compose file is the dev container
   "service": "app",
-  "workspaceFolder": "/chronos",
+
+  // The workspace folder inside the container
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
